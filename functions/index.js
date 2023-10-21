@@ -44,10 +44,7 @@ query GetAllSatellites {
 
 // The URL of the other server's Apollo endpoint 
 const otherServerUrl = "https://junkspace-zcpt.onrender.com/graphql";
-
-// Make a request every 14 minutes
-setInterval(async () => {
-  
+const doTheThing = async () => {
   const response = await fetch(otherServerUrl, {
     method: 'POST',
     headers: {
@@ -60,4 +57,9 @@ setInterval(async () => {
   console.log(response)
   const data = await response.json();
   console.log(data);
+// Make a request every 14 minutes
+setInterval(async () => {
+  doTheThing()
 }, 14 * 60 * 1000);
+}
+doTheThing()
