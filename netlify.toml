@@ -1,11 +1,7 @@
-[
-build
-]
+[build]
   command = "npm install"
   functions = "functions"
 
-[
-dev
-]
+[dev]
   command = "npm run dev"
   functions = "functions"
