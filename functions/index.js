@@ -41,7 +41,8 @@ query GetAllSatellites {
   }
 }
 `;
-
+// const delay = 14 * 60 * 1000
+const delay = 2000
 // The URL of the other server's Apollo endpoint 
 const otherServerUrl = "https://junkspace-zcpt.onrender.com/graphql";
 const doTheThing = async () => {
@@ -60,6 +61,6 @@ const doTheThing = async () => {
 // Make a request every 14 minutes
 setInterval(async () => {
   doTheThing()
-}, 14 * 60 * 1000);
+}, delay);
 }
 doTheThing()
