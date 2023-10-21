@@ -46,7 +46,7 @@ const otherServerUrl = "https://junkspace-zcpt.onrender.com/graphql";
 // Make a request every 14 minutes
 setInterval(async () => {
   
-  const response = await fetch(graphqlEndpoint, {
+  const response = await fetch(otherServerUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
