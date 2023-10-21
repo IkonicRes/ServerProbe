@@ -1,5 +1,7 @@
 const fetch = require('cross-fetch');
-const GET_ALL_SATELLITES = gql`
+
+
+const GET_ALL_SATELLITES = `
 query GetAllSatellites {
     allSatellites {
     id
@@ -55,7 +57,7 @@ setInterval(async () => {
       query: GET_ALL_SATELLITES, 
     })
   });
-  
+  console.log(response)
   const data = await response.json();
   console.log(data);
 }, 14 * 60 * 1000);
