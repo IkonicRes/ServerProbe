@@ -42,7 +42,7 @@ query GetAllSatellites {
 }
 `;
 // const delay = 14 * 60 * 1000
-const delay = 2000
+const delay = 10000
 // The URL of the other server's Apollo endpoint 
 const otherServerUrl = "https://junkspace-zcpt.onrender.com/graphql";
 const doTheThing = async () => {
